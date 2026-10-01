@@ -1,5 +1,5 @@
 import React from 'react';
-import { Thermometer, Wind, Sun, BatteryCharging, Radio } from 'lucide-react';
+import { Thermometer, Wind, Sun, BatteryCharging } from 'lucide-react';
 
 interface PolarStationVisualProps {
   temperature?: number;
@@ -15,7 +15,7 @@ export const PolarStationVisual: React.FC<PolarStationVisualProps> = ({
   batteryPct = 78,
 }) => {
   return (
-    <div className="relative w-full rounded-2xl overflow-hidden border border-cyan-900/40 bg-[#060e22] shadow-2xl">
+    <div className="relative w-full rounded-2xl overflow-hidden border border-slate-200/90 bg-[#060e22] shadow-lg">
       {/* Arctic Atmosphere Canvas */}
       <div className="relative h-[290px] sm:h-[380px] md:h-[420px] w-full overflow-hidden select-none">
         {/* Deep Polar Sky */}
@@ -111,7 +111,7 @@ export const PolarStationVisual: React.FC<PolarStationVisualProps> = ({
               </text>
             </g>
 
-            {/* Smaller Secondary Turbine (Deep perspective) */}
+            {/* Smaller Secondary Turbine */}
             <g transform="translate(100, 220) scale(0.65)">
               <line x1="0" y1="0" x2="0" y2="120" stroke="#64748b" strokeWidth="3" />
               <circle cx="0" cy="0" r="5" fill="#0284c7" />
@@ -122,7 +122,7 @@ export const PolarStationVisual: React.FC<PolarStationVisualProps> = ({
 
             {/* Central Geodesic Polar Research Habitat Outpost */}
             <g transform="translate(480, 275)">
-              {/* Hydraulic Elevating Stilts (Protects against drifting snow) */}
+              {/* Hydraulic Elevating Stilts */}
               <line x1="-95" y1="30" x2="-95" y2="75" stroke="#475569" strokeWidth="5" />
               <line x1="-35" y1="35" x2="-35" y2="75" stroke="#475569" strokeWidth="5" />
               <line x1="35" y1="35" x2="35" y2="75" stroke="#475569" strokeWidth="5" />
@@ -155,13 +155,13 @@ export const PolarStationVisual: React.FC<PolarStationVisualProps> = ({
               <line x1="-12" y1="-62" x2="12" y2="-62" stroke="#94a3b8" strokeWidth="2" />
               <line x1="-8" y1="-52" x2="8" y2="-52" stroke="#94a3b8" strokeWidth="2" />
 
-              {/* Secondary Habitat Pod (Left Connector) */}
+              {/* Secondary Habitat Pod */}
               <rect x="-160" y="10" width="55" height="20" rx="3" fill="#1e293b" stroke="#0ea5e9" strokeWidth="1.5" />
               <rect x="-152" y="15" width="10" height="8" rx="1.5" fill="#fef08a" opacity="0.8" />
               <rect x="-135" y="15" width="10" height="8" rx="1.5" fill="#fef08a" opacity="0.8" />
               <line x1="-140" y1="30" x2="-140" y2="70" stroke="#475569" strokeWidth="4" />
 
-              {/* Warm Laboratory Observation Windows (Central Dome) */}
+              {/* Warm Laboratory Observation Windows */}
               <rect x="-30" y="0" width="15" height="10" rx="2" fill="#fef08a" opacity="0.95" />
               <rect x="-7" y="0" width="15" height="10" rx="2" fill="#fef08a" opacity="0.95" />
               <rect x="16" y="0" width="15" height="10" rx="2" fill="#fef08a" opacity="0.95" />
@@ -174,7 +174,6 @@ export const PolarStationVisual: React.FC<PolarStationVisualProps> = ({
 
             {/* Bifacial Photovoltaic Solar Arrays (Right Flank) */}
             <g transform="translate(710, 240)">
-              {/* Front Solar Panel Rack */}
               <g transform="rotate(-18)">
                 <rect x="0" y="0" width="80" height="35" rx="3" fill="url(#solarCellGrad)" stroke="#38bdf8" strokeWidth="2" />
                 <line x1="26" y1="0" x2="26" y2="35" stroke="#0ea5e9" strokeWidth="1.5" />
@@ -184,7 +183,6 @@ export const PolarStationVisual: React.FC<PolarStationVisualProps> = ({
               <line x1="35" y1="20" x2="35" y2="75" stroke="#64748b" strokeWidth="3.5" />
               <line x1="25" y1="75" x2="45" y2="75" stroke="#475569" strokeWidth="3" />
 
-              {/* Offset Rear Solar Panel Rack */}
               <g transform="translate(65, 25) rotate(-18)">
                 <rect x="0" y="0" width="80" height="35" rx="3" fill="url(#solarCellGrad)" stroke="#38bdf8" strokeWidth="2" />
                 <line x1="26" y1="0" x2="26" y2="35" stroke="#0ea5e9" strokeWidth="1.5" />
@@ -202,35 +200,35 @@ export const PolarStationVisual: React.FC<PolarStationVisualProps> = ({
         </div>
 
         {/* Floating Scientific Telemetry HUD Bar */}
-        <div className="absolute top-3 left-3 right-3 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs text-slate-200 pointer-events-none">
-          <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-slate-900/90 backdrop-blur-md border border-slate-700/80 shadow-lg self-start">
+        <div className="absolute top-3 left-3 right-3 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs pointer-events-none">
+          <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/95 backdrop-blur-md border border-slate-200/90 text-slate-900 shadow-md self-start">
             <span className="relative flex h-2.5 w-2.5">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500" />
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75" />
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-600" />
             </span>
-            <span className="font-semibold text-white tracking-wide">Polar Outpost Grid</span>
-            <span className="text-slate-600">·</span>
-            <span className="font-mono text-cyan-300 text-[11px]">Autonomous Control</span>
+            <span className="font-bold text-slate-900 tracking-wide">Polar Outpost Grid</span>
+            <span className="text-slate-300">·</span>
+            <span className="font-mono text-cyan-700 text-[11px] font-semibold">Autonomous Control</span>
           </div>
 
-          <div className="flex flex-wrap items-center gap-2 sm:gap-3 px-3 py-1.5 rounded-xl bg-slate-900/90 backdrop-blur-md border border-slate-700/80 shadow-lg font-mono text-xs self-start sm:self-auto">
-            <span className="flex items-center gap-1.5 text-cyan-300 font-bold">
-              <Thermometer className="w-3.5 h-3.5 shrink-0 text-cyan-400" />
+          <div className="flex flex-wrap items-center gap-2 sm:gap-3 px-3 py-1.5 rounded-xl bg-white/95 backdrop-blur-md border border-slate-200/90 text-slate-900 shadow-md font-mono text-xs self-start sm:self-auto font-medium">
+            <span className="flex items-center gap-1.5 text-cyan-700 font-bold">
+              <Thermometer className="w-3.5 h-3.5 shrink-0 text-cyan-600" />
               <span>{temperature}°C</span>
             </span>
-            <span className="text-slate-600">·</span>
-            <span className="flex items-center gap-1 text-amber-300">
-              <Sun className="w-3 h-3 text-amber-400" />
+            <span className="text-slate-300">·</span>
+            <span className="flex items-center gap-1 text-amber-700 font-semibold">
+              <Sun className="w-3 h-3 text-amber-500" />
               <span>{solarKw} kW</span>
             </span>
-            <span className="text-slate-600">·</span>
-            <span className="flex items-center gap-1 text-sky-300">
-              <Wind className="w-3 h-3 text-sky-400" />
+            <span className="text-slate-300">·</span>
+            <span className="flex items-center gap-1 text-sky-700 font-semibold">
+              <Wind className="w-3 h-3 text-sky-500" />
               <span>{windKw} kW</span>
             </span>
-            <span className="text-slate-600">·</span>
-            <span className="flex items-center gap-1 text-emerald-300">
-              <BatteryCharging className="w-3.5 h-3.5 text-emerald-400" />
+            <span className="text-slate-300">·</span>
+            <span className="flex items-center gap-1 text-emerald-700 font-semibold">
+              <BatteryCharging className="w-3.5 h-3.5 text-emerald-600" />
               <span>{batteryPct}%</span>
             </span>
           </div>

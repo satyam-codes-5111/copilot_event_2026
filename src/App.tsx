@@ -19,7 +19,7 @@ export default function App() {
   const [currentView, setCurrentView] = useState<'landing' | 'dashboard'>('landing');
 
   return (
-    <div className="min-h-screen bg-[#071126] font-sans text-slate-100 flex flex-col selection:bg-cyan-500/30 selection:text-cyan-200">
+    <div className="min-h-screen bg-white font-sans text-slate-900 flex flex-col selection:bg-cyan-500/20 selection:text-cyan-800">
       {/* Responsive Navigation Bar */}
       <Navigation
         currentView={currentView}
@@ -32,7 +32,7 @@ export default function App() {
       />
 
       {/* Main View Area */}
-      <main className="flex-1">
+      <main className="flex-1 bg-white">
         {currentView === 'landing' ? (
           <LandingPage
             onViewDashboard={() => {

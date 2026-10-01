@@ -1,7 +1,9 @@
 @import "tailwindcss";
 
 @layer base {
-  body {
+  html, body {
+    background-color: #ffffff;
+    color: #0f172a;
     font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   }
   code, kbd, samp, pre, .font-mono {
@@ -9,18 +11,18 @@
   }
 }
 
-/* Custom subtle scrollbar for dashboard panels */
+/* Subtle clean scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: rgba(15, 23, 42, 0.6);
+  background: #f8fafc;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(51, 65, 85, 0.7);
+  background: #cbd5e1;
   border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(100, 116, 139, 0.9);
+  background: #94a3b8;
 }

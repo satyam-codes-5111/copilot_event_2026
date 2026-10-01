@@ -37,50 +37,50 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
   alerts,
 }) => {
   return (
-    <div className="min-h-screen bg-[#071126] text-slate-100 pb-20 selection:bg-cyan-500/30 selection:text-cyan-200">
+    <div className="min-h-screen bg-white text-slate-900 pb-20 selection:bg-cyan-500/20 selection:text-cyan-800">
       {/* Scientific Sub-Header / Telemetry Banner */}
-      <div className="border-b border-slate-800/90 bg-[#060e22]/90 backdrop-blur-md">
+      <div className="border-b border-slate-200 bg-slate-50/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-5 flex flex-wrap items-center justify-between gap-4">
           <div>
             <div className="flex items-center gap-2.5">
               <span className="relative flex h-2.5 w-2.5">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500" />
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75" />
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-600" />
               </span>
-              <h1 className="text-xl sm:text-2xl font-extrabold tracking-tight text-white">
+              <h1 className="text-xl sm:text-2xl font-extrabold tracking-tight text-slate-900">
                 Polar Station Smart Energy Console
               </h1>
             </div>
-            <p className="text-xs sm:text-sm text-slate-400 mt-1 flex flex-wrap items-center gap-2">
+            <p className="text-xs sm:text-sm text-slate-600 mt-1 flex flex-wrap items-center gap-2">
               <span>Antarctic Outpost Microgrid</span>
-              <span className="text-slate-600">·</span>
-              <span className="font-mono text-cyan-400">Autonomous Power Balancing</span>
-              <span className="text-slate-600">·</span>
-              <span className="text-slate-400">Station Coordinates: 77°51'S, 166°40'E</span>
+              <span className="text-slate-300">·</span>
+              <span className="font-mono text-cyan-700 font-semibold">Autonomous Power Balancing</span>
+              <span className="text-slate-300">·</span>
+              <span className="text-slate-600">Station Coordinates: 77°51'S, 166°40'E</span>
             </p>
           </div>
 
-          <div className="flex flex-wrap items-center gap-2 sm:gap-3 text-xs font-mono text-slate-300">
-            <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-900/90 border border-slate-800 text-slate-300">
-              <Clock className="w-3.5 h-3.5 text-cyan-400" />
+          <div className="flex flex-wrap items-center gap-2 sm:gap-3 text-xs font-mono">
+            <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white border border-slate-200 text-slate-700 shadow-xs">
+              <Clock className="w-3.5 h-3.5 text-cyan-600" />
               <span>15:00 UTC Active</span>
             </div>
-            <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-950/40 border border-emerald-800/60 text-emerald-300">
-              <Radio className="w-3.5 h-3.5 text-emerald-400" />
+            <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 shadow-xs font-semibold">
+              <Radio className="w-3.5 h-3.5 text-emerald-600" />
               <span>Grid Online</span>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 sm:pt-8 space-y-6 sm:space-y-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 sm:pt-8 space-y-6 sm:space-y-8 bg-white">
         {/* Six Primary Energy Metric Cards */}
         <div>
           <div className="flex items-center justify-between mb-3">
-            <h2 className="text-xs font-mono font-bold uppercase tracking-wider text-slate-400">
+            <h2 className="text-xs font-mono font-bold uppercase tracking-wider text-slate-500">
               Real-Time Outpost Telemetry
             </h2>
-            <span className="text-xs font-mono text-cyan-400">Updated: Live</span>
+            <span className="text-xs font-mono text-cyan-700 font-semibold">Updated: Live</span>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-3.5 sm:gap-4">
@@ -154,7 +154,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
         {/* Energy Charts: Consumption Area Chart & 24h Prediction Line Chart */}
         <div>
           <div className="flex items-center justify-between mb-3">
-            <h2 className="text-xs font-mono font-bold uppercase tracking-wider text-slate-400">
+            <h2 className="text-xs font-mono font-bold uppercase tracking-wider text-slate-500">
               Power Curves & Neural Forecasting
             </h2>
             <span className="text-xs font-mono text-slate-500">24-Hour Observation Window</span>
@@ -169,10 +169,10 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
         {/* AI Recommendations & Energy Alerts Panels */}
         <div>
           <div className="flex items-center justify-between mb-3">
-            <h2 className="text-xs font-mono font-bold uppercase tracking-wider text-slate-400">
+            <h2 className="text-xs font-mono font-bold uppercase tracking-wider text-slate-500">
               Autonomous Intelligence & Signal Monitoring
             </h2>
-            <span className="text-xs font-mono text-emerald-400">Optimal Grid Equilibrium</span>
+            <span className="text-xs font-mono text-emerald-700 font-semibold">Optimal Grid Equilibrium</span>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">

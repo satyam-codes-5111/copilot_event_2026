@@ -19,7 +19,7 @@ export default function App() {
   const [currentView, setCurrentView] = useState<'landing' | 'dashboard'>('landing');
 
   return (
-    <div className="min-h-screen bg-slate-950 font-sans text-slate-100 flex flex-col selection:bg-cyan-500/30 selection:text-cyan-200">
+    <div className="min-h-screen bg-[#071126] font-sans text-slate-100 flex flex-col selection:bg-cyan-500/30 selection:text-cyan-200">
       {/* Responsive Navigation Bar */}
       <Navigation
         currentView={currentView}

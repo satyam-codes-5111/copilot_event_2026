@@ -1,0 +1,6 @@
+{
+  "name": "PolarGrid AI — Polar Station Energy Management",
+  "description": "AI-driven microgrid and smart energy management system for remote polar research stations, orchestrating renewable generation, battery storage, and extreme thermal resilience.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
